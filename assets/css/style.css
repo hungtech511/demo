@@ -1,0 +1,490 @@
+@import url("typhography.css");
+
+/*******************************
+        TABLE OF CONTENT
+********************************
+    + Element
+    + Header
+        -Nav Menu
+        
+    + Footer
+
+
+
+
+/********** Element **********/
+.section {
+  padding: 100px 0;
+}
+
+/*-- Button Styles --*/
+.btn {
+  display: inline-block;
+  font-size: 13px;
+  line-height: 26px;
+  padding: 11px 44px;
+  border-radius: 24px;
+  background-color: #0f66dc;
+  color: #fff;
+  font-weight: 500;
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.btn span {
+  border-radius: 50%;
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  opacity: 0.1;
+  background: #000;
+  -webkit-transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+  -ms-transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+  -o-transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.btn:hover span,
+.btn:focus span {
+  width: 20rem;
+  height: 20rem;
+}
+.cta-btn {
+  background-color: #00dadc;
+}
+.border-btn {
+  background-color: #fff;
+  border: 2px solid #0f66dc;
+  color: #0f66dc;
+  transition: 0.3s all;
+}
+.border-btn:hover {
+  background-color: #0f66dc;
+  color: #fff;
+}
+/*-- Heading Styles --*/
+.heading-box {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.heading-box .heading-bar,
+.heading-box-2 .heading-bar {
+  position: relative;
+  padding-bottom: 22px;
+}
+.heading-box-2 .heading-bar {
+  max-width: 500px;
+}
+.heading-box .heading-bar::after,
+.heading-box-2 .heading-bar::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  background-color: #00dadc;
+  width: 80px;
+  height: 2px;
+}
+.heading-box .text {
+  margin: 0 auto;
+  margin-top: 30px;
+  line-height: 26px;
+  max-width: 560px;
+  font-weight: 500;
+}
+.heading-box-2 {
+  margin-bottom: 80px;
+}
+.heading-box-2 .heading-bar::after {
+  left: 0;
+  transform: translate(0%, 0%);
+}
+/********** Header **********/
+
+/*-- Nav Bar --*/
+.nav {
+  padding: 26px 0;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.nav .cart {
+  position: relative;
+}
+.nav .cart::before {
+  content: "3";
+  background-color: #48ba72;
+  position: absolute;
+  right: -14px;
+  top: -10px;
+  color: #fff;
+  font-size: 12px;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 20px;
+  border-radius: 50%;
+}
+
+/*-- Hero --*/
+.text-wrapper {
+  padding: 351px 0;
+}
+.text-wrapper p {
+  line-height: 1.6;
+  max-width: 488px;
+}
+.text-wrapper .hero-button {
+  margin-top: 62px;
+}
+
+.iphone-ipad {
+  position: relative;
+  animation: MoveUpDown 5s linear infinite;
+  z-index: 9999;
+}
+.iphone-ipad::after {
+  content: url("../img/home_app/iphone-ipad.png");
+  position: absolute;
+  top: 80px;
+  left: -2px;
+}
+.blue-dotted,
+.yellow-dotted {
+  position: relative;
+}
+.blue-dotted::after {
+  content: url("../img/home_app/blue-dot.png");
+  position: absolute;
+  top: 166px;
+  left: 376px;
+}
+
+.yellow-dotted::after {
+  content: url("../img/home_app/yellow-dot.png");
+  position: absolute;
+  top: 836px;
+  left: 86px;
+}
+.circle {
+  width: 40px;
+  height: 40px;
+  margin: auto;
+  border-radius: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+.red-circle {
+  position: absolute;
+  top: 90%;
+  left: 85%;
+  border: 5px solid #eec8ca;
+  animation: grow 6s infinite;
+}
+.yellow-circle {
+  position: absolute;
+  top: 30%;
+  left: 42%;
+  border: 5px solid #f3e8d7;
+  animation: grow 8s infinite;
+}
+.green-circle {
+  position: absolute;
+  top: 64%;
+  left: 16%;
+  border: 5px solid #cfece9;
+  animation: grow 8s infinite;
+}
+.blue-circle {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  border: 5px solid #c6e6fd;
+  animation: grow 10s infinite;
+}
+@keyframes MoveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(0.6);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(0.6);
+  }
+}
+
+/********** Slider **********/
+
+.slider-wrapper {
+  position: relative;
+}
+.progressBarContainer {
+  display: flex;
+  flex-direction: column;
+}
+.progressBarContainer .item {
+  width: 334px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  cursor: pointer;
+  background-color: #edf5fc;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.progressBarContainer .item.active {
+  background-color: #323754;
+  animation-name: fade;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+.progressBarContainer .item.active h6 {
+  color: #fff;
+}
+.progressBarContainer .item.active p {
+  color: #acacac;
+}
+.progressBarContainer .item-wrapper {
+  padding: 41px 60px;
+}
+.progressBarContainer .item-wrapper h6 {
+  margin-bottom: 20px;
+}
+.progressBarContainer .item {
+  margin-right: 0;
+}
+.progressBarContainer .item span.progressBar {
+  width: 100%;
+  height: 4px;
+  display: block;
+}
+.progressBarContainer .item span.progressBar .inProgress {
+  background-color: #00dadc;
+  width: 0%;
+  height: 4px;
+}
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/********** Expense-Tracker **********/
+.expense-tracker .yellow-dotted::after {
+  content: url("../img/home_app/yellow-long-dot.png");
+  top: -210px;
+  z-index: -1;
+  left: -50px;
+}
+
+/********** Feature **********/
+.feature-item i {
+  color: #00dadc;
+  font-size: 28px;
+}
+.feature-item p {
+  line-height: 1.875;
+}
+
+/********** Budget Section **********/
+.budget-section {
+  position: relative;
+}
+.budget-section::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #e7e7e7;
+  height: 1px;
+  width: 70%;
+}
+.budget-section .blue-dotted::after {
+  position: absolute;
+  top: -18px;
+  left: 1080px;
+}
+.flickity-phone {
+  position: relative;
+  z-index: 1;
+}
+.flickity-phone .phone-left {
+  position: absolute;
+  left: 399px;
+  top: 51px;
+}
+.flickity-phone .phone-right {
+  position: absolute;
+  left: 749px;
+  top: 51px;
+}
+.flickity-phone .phone-bottom {
+  position: absolute;
+  top: 717px;
+  left: 399px;
+}
+.screen-slider img {
+  overflow: auto;
+  transform: translateY(-33px);
+  margin: 0 43px;
+  z-index: -1;
+  box-shadow: 0 8px 22px 0 rgb(204 204 204 / 40%);
+}
+
+/********** Brand Section **********/
+
+.brand-section img {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.brand-section img:hover {
+  filter: brightness(0.5);
+}
+
+/********** Manage Section **********/
+.manage-section {
+  position: relative;
+}
+.manage-section .manage-box {
+  position: relative;
+}
+.manage-section .manage-box img {
+  position: absolute;
+  left: -63px;
+  top: -95px;
+}
+.manage-box .desc-box {
+  padding: 46px 26px 46px 276px;
+}
+.manage-box .desc-box p {
+  line-height: 1.5;
+  margin-bottom: 38px;
+}
+.manage-section .financial-box {
+  padding: 46px 0;
+}
+.manage-section .financial-box h4 {
+  max-width: 390px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.manage-section .financial-box p {
+  color: #acacac;
+  margin-bottom: 36px;
+}
+
+.manage-section .yellow-dotted::after {
+  top: -35px;
+  left: 307px;
+  z-index: -1;
+}
+
+/********** Plan Section **********/
+.plan-wrapper{
+  margin-bottom:100px;
+}
+.plan-item {
+  padding: 40px 0;
+  border-radius: 4px;
+}
+.standard {
+  position: relative;
+  border: 1px solid #e7e7e7;
+  transform: translateY(10px);
+  transition: all 0.3s;
+}
+.standard:hover {
+  transform: translateY(0px);
+  border-bottom: 4px solid #00dadc;
+}
+
+.basic {
+  border-bottom: 4px solid #00dadc;
+}
+.plan-heading {
+  position: relative;
+  padding-bottom: 22px;
+}
+.plan-heading .plan-type {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 28px;
+}
+.plan-heading::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 24px;
+  width: 320px;
+  height: 1px;
+  background-color: #e7e7e7;
+}
+
+.basic .plan-heading::after {
+  background-color: #696c80;
+}
+
+
+/********** Account Section **********/
+.account-section .account-picture{
+  position: relative;
+}
+.account-section .account-picture::after{
+  position: absolute;
+  content:url("../img/home_app/video-bg-1.jpg");
+  top:0;
+  left:-208px;
+}
+.introduce-account{
+  padding:120px 0;
+}

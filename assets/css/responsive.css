@@ -1,0 +1,94 @@
+
+@media only screen and (max-width: 1920px) {
+
+}
+
+@media only screen and (min-width: 1366px) {
+ 
+}
+
+@media only screen and (min-width: 1200px) {
+    .container{
+        max-width: 1200px;
+    }
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 992px) {
+    .list-button{
+        display: none !important;
+    }
+    .icon-wrapper,.icon-wrapper .cta-btn{
+        display: block !important;
+    }
+    .nav-lists .nav-list{
+        float: initial !important;
+        margin-left:0 !important;
+    }
+    .cart,.search{
+        margin-top:20px;
+        display: inline-block;
+    }
+    .icon-wrapper .cta-btn{
+        margin-top:20px;
+    }
+    .flickity-phone .phone-left {
+        position: absolute;
+        left: 279px;
+        top: 51px;
+    }
+    .flickity-phone .phone-right {
+        position: absolute;
+        left: 629px;
+        top: 51px;
+    }
+    .flickity-phone .phone-bottom {
+        position: absolute;
+        top: 718px;
+        left: 279px;
+    }
+    .manage-box .desc-box {
+        padding: 22px 26px 22px 276px;
+    }
+    .plan-heading::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50px;
+        width: 220px;
+        height: 1px;
+        background-color: #e7e7e7;
+    }
+    .introduce-account{ padding: 0;}
+    .introduce-list i{ margin-right: 5px !important}
+}
+
+@media only screen and (max-width: 1199px) {
+
+}
+
+@media only screen and (max-width: 991px) {
+
+}
+
+
+@media only screen and (max-width: 767px) {
+
+}
+
+@media only screen and (max-width: 575px) {
+    .progressBarContainer .item{
+        display: none
+    }
+    .progressBarContainer .item.active{
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    
+}
+
+@media only screen and (max-width: 375px) {
+
+}
+
